@@ -1,0 +1,165 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  font-family: "Montserrat", sans-serif;
+  color: #333;
+}
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+legend {
+  font-size: 1.15rem;
+}
+fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+::placeholder {
+  color: #828282;
+}
+
+.form-control {
+  border: 0;
+  min-width: 0;
+  background: transparent;
+  font-size: 1rem;
+}
+.form-control:focus {
+  outline: none;
+}
+
+.form-group {
+  margin: 1rem 0;
+  display: grid;
+}
+label {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  color: #4f4f4f;
+}
+.form-group > div {
+  display: inline-grid;
+  grid-template-columns: auto 1fr;
+  border: 1px solid #828282;
+  transition: color 0.5s ease-in-out;
+  padding: 1rem;
+  border-radius: 12px;
+  gap: 1rem;
+}
+.form-group > div:focus-within {
+  border: 1px solid #333;
+}
+.flex-end {
+  justify-content: flex-end;
+  display: flex;
+  padding: 1.5rem;
+}
+
+.flex-end > button {
+  color: #fff;
+  background: #f2994a;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  font-size: 1rem;
+  border: 0;
+}
+
+.checkout-container > :first-child {
+  background-color: #f2f2f2;
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 380px;
+}
+
+.checkout-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.checkout-item-info {
+  display: flex;
+  flex-direction: column;
+}
+.checkout-item-info > :last-child {
+  margin-top: auto;
+  display: flex;
+  padding: 1rem;
+  border-radius: 12px;
+  border: 1px solid #828282;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h3 {
+  margin-bottom: 1rem;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  text-align: left;
+  margin-top: 6rem;
+}
+tr {
+  border-top: 2px solid #828282;
+}
+tr > * {
+  padding: 1rem 0;
+}
+
+.checkout-container > * {
+  margin-top: 1rem;
+}
+
+td {
+  text-align: right;
+}
+.checkout-item-info span:first-child {
+  color: #f2994a;
+}
+.checkout-item-info span:last-child {
+  text-decoration: line-through;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 12px;
+}
+
+@media screen and (min-width: 768px) {
+  .checkout-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  .checkout-container > :first-child {
+    order: 1;
+    align-self: flex-start;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .checkout-container {
+    gap: 3rem;
+  }
+  fieldset > div:not(.form-group) {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+  }
+  .checkout-container > :first-child {
+    justify-self: flex-end;
+  }
+}
